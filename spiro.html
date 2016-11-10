@@ -1,0 +1,76 @@
+<html>
+ <head>
+     <meta charset="utf-8">
+        <link type="text/css" href="css/styles.css" rel="stylesheet" />
+        <link type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/ui-darkness/jquery-ui.css" rel="stylesheet" />
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <!-- CodeMirror -->
+    <script type="text/javascript" src="js/spiro.js"></script>
+
+    <title>My Spiro Demo</title>
+ </head>
+ <body>
+ <div id="wrap">
+    
+    <div id="canvascontainer">
+         <canvas class="abs_canvas" id="canvas_fix" width="900" height="900"></canvas>
+         <canvas class="abs_canvas" id="canvas_dyn" height="900" width="900"></canvas>
+     </div>
+     <div id="controls">
+      <ul id="tree">
+      <li class="tree_element ui-state-default ui-corner-all">
+        <h4>Neues Element</h4>
+        <ul class="icon_wrapper">
+        <li><span class="add_base ui-icon ui-icon-plusthick">+</span></li>
+        </ul>
+        <div class="cb"></div>
+        </li>
+      </ul>
+      <div class="cb"></div>
+      <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" id="start"><span class="ui-button-text">Start</span></button>
+      <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  id="reset_dynamics"><span class="ui-button-text">Reset Dynamics</span></button>
+      <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  id="reset"><span class="ui-button-text">Reset</span></button>
+      <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  id="stop"><span class="ui-button-text">Stop</span></button><br>
+      <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  id="save_image"><span class="ui-button-text">Save Image</span></button><br>
+      <ul id="save_list">
+        <li class="ui-state-default ui-corner-all"><label for="save_info">Saved Json</label><input id="save_info" type="text" value="">
+        <div class="cb"></div>
+        </li>
+        <li class="ui-state-default ui-corner-all"><label for="custom_json">Custom Json</label><input id="custom_json" type="text" value="">
+        <div class="cb"></div>
+        </li>
+      </ul>
+      <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  id="save"><span class="ui-button-text">Save</span></button>
+      <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"  id="load"><span class="ui-button-text">Load</span></button>
+     </div>
+  </div>
+<div id="dialog-form" title="Element hinzufügen">
+	<p class="validateTips">Konfigurieren.</p>
+	<form>
+	<fieldset>
+    <div class="input_field  type_selection">
+      <label for="size">Typ</label>
+      <select id="type" name="type">
+        <option value="1">Kreis</option>
+        <option value="2">Punkt</option>
+      </select>
+    </div>
+		<label for="size">Größe</label>
+		<input type="text" name="size" id="size" class="text ui-widget-content ui-corner-all" /><br>
+		<label for="offset">Offset</label>
+		<input type="text" name="offset" id="offset" class="text ui-widget-content ui-corner-all" />
+		<div class="input_field point">
+      <label for="color">Farbe</label>
+      <input type="color" name="color" id="color" class="color text ui-widget-content ui-corner-all" />
+		 </div>
+		<div class="input_field  circle">
+      <label for="run_inner">Innen?</label>
+      <input type="checkbox" name="run_inner" id="run_inner" class="checkbox ui-widget-content ui-corner-all" />
+		 </div>
+	</fieldset>
+	</form>
+</div>
+
+ </body>
+</html>

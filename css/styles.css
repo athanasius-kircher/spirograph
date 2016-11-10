@@ -1,0 +1,58 @@
+body{
+    font-size:12px;
+}
+
+.cb{
+  clear:both;
+}
+
+ul#tree, ul#save_list{
+  margin: 0;
+  padding: 0;
+}
+
+ul#tree li,ul#save_list li{
+  list-style: none;
+} 
+ul#tree .ui-icon{
+  cursor:pointer;
+}
+
+#tree .tree_element h4,#tree .tree_element ul.icon_wrapper,#tree .tree_element ul.icon_wrapper li{
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+#tree .tree_element h4,#save_list li label{
+  margin-left:10px;
+  font-size: 1.3em;
+line-height: 1.5em;
+}
+
+.abs_canvas{
+    z-index: 3;
+    position:absolute;
+    left:0px;
+    top:0px;
+}
+#controls{
+    position:absolute;
+    left:900px;
+    top:100px;
+}
+.icon{
+    font-size:24px;
+}
+
+
+#tree ul.sub_elements{
+ 
+}
+
+#tree .tree_element ul.icon_wrapper,#save_list li input{
+margin-right:10px;
+  float:right;
+}
+#save_list li.load_item.selected{
+  
+}
